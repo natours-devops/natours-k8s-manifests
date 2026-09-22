@@ -1,0 +1,10 @@
+name: auth-service
+
+replicaCount: 1
+
+image:
+  repository: 772097700150.dkr.ecr.us-east-1.amazonaws.com/natours-auth-service
+  tag: latest
+
+service:
+  port: 3001

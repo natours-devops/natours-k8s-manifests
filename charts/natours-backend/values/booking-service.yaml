@@ -1,0 +1,10 @@
+name: booking-service
+
+replicaCount: 1
+
+image:
+  repository: 772097700150.dkr.ecr.us-east-1.amazonaws.com/natours-booking-service
+  tag: latest
+
+service:
+  port: 3004

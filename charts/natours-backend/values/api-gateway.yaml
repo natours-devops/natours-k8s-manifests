@@ -1,0 +1,10 @@
+name: api-gateway
+
+replicaCount: 1
+
+image:
+  repository: 772097700150.dkr.ecr.us-east-1.amazonaws.com/natours-api-gateway
+  tag: latest
+
+service:
+  port: 3005
