@@ -8,3 +8,17 @@ image:
 
 service:
   port: 3005
+  
+config: 
+  NODE_ENV: development
+  PORT: 3005
+  GMAIL_USER: thanuj.kularathna2@gmail.com
+  GMAIL_PASSWORD: dianiiitezyzuosw
+  FRONTEND_URL: http://localhost:5173
+  
+  EMAIL_FROM: "thanujakularathna119@gmail.com"
+  EMAIL_HOST: "sandbox.smtp.mailtrap.io"
+  EMAIL_PORT: "2525"
+  
+  AWS_REGION: us-east-1
+  SQS_BOOKING_QUEUE_URL: https://sqs.us-east-1.amazonaws.com/772097700150/natours-booking-confirmed
