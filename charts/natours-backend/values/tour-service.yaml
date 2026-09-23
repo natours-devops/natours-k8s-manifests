@@ -8,3 +8,11 @@ image:
 
 service:
   port: 3002
+  
+config: 
+  NODE_ENV: development
+  PORT: 3002
+  
+  AUTH_SERVICE_URL: http://auth-service:3001
+  REVIEW_SERVICE_URL: http://review:3003
+  FRONTEND_URL: http://localhost:5173 #change this later
