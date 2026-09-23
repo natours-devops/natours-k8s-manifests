@@ -8,3 +8,13 @@ image:
 
 service:
   port: 3001
+
+config:
+  NODE_ENV: development
+  PORT: "3001"
+  JWT_EXPIRES_IN: "90d"
+  JWT_COOKIE_EXPIRES_IN: "90"
+  FRONTEND_URL: "https://your-domain.com" #change this later
+  NOTIFICATION_SERVICE_URL: "http://notification-service:3005"
+
+
