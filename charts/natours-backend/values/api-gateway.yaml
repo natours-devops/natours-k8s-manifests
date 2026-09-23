@@ -10,11 +10,11 @@ service:
   port: 3005
   
 config:
-  NODE_ENV=development
-  PORT=3000
-  AUTH_SERVICE_URL=http://auth-service:3001
-  TOUR_SERVICE_URL=http://tour-service:3002
-  REVIEW_SERVICE_URL=http://review-service:3003
-  BOOKING_SERVICE_URL=http://booking-service:3004
-  FRONTEND_URL=http://localhost:5173
+  NODE_ENV: development
+  PORT: 3000
+  AUTH_SERVICE_URL: http://auth-service:3001
+  TOUR_SERVICE_URL: http://tour-service:3002
+  REVIEW_SERVICE_URL: http://review-service:3003
+  BOOKING_SERVICE_URL: http://booking-service:3004
+  FRONTEND_URL: http://localhost:5173
 
