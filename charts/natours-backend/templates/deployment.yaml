@@ -16,4 +16,9 @@ spec:
         - name: {{ .Values.name }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           ports:
-            - containerPort: {{ .Values.service.port }}
+            - containerPort: {{ .Values.service.port }}         
+          envFrom:
+          - configMapRef:
+              name: {{ .Values.name }}-config
+           - secretRef:
+              name: {{ .Values.name }}-secret
