@@ -22,3 +22,8 @@ config:
   
   AWS_REGION: us-east-1
   SQS_BOOKING_QUEUE_URL: https://sqs.us-east-1.amazonaws.com/772097700150/natours-booking-confirmed
+
+
+serviceAccount:
+  name: notification-service-sa
+  create: true

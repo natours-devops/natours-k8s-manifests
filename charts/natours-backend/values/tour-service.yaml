@@ -16,3 +16,6 @@ config:
   AUTH_SERVICE_URL: http://auth-service:3001
   REVIEW_SERVICE_URL: http://review:3003
   FRONTEND_URL: http://localhost:5173 #change this later
+
+serviceAccount:
+  create: false

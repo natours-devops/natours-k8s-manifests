@@ -18,3 +18,5 @@ config:
   BOOKING_SERVICE_URL: http://booking-service:3004
   FRONTEND_URL: http://localhost:5173
 
+serviceAccount:
+  create: false
