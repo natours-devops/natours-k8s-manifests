@@ -27,3 +27,11 @@ config:
 serviceAccount:
   name: notification-service-sa
   create: true
+  
+resources:
+  requests:
+    cpu: 100m
+    memory: 128Mi
+  limits:
+    cpu: 500m
+    memory: 512Mi

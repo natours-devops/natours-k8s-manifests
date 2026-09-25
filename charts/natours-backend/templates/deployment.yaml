@@ -22,9 +22,19 @@ spec:
           serviceAccountName: {{ .Values.serviceAccount.name }}
           {{- end }} #bind service account if create = true
           
+          resources:
+            requests: 
+              cpu: {{ .Values.resources.requests.cpu }}
+              memory: {{ .Values.resources.requests.memory}}
+            limits: 
+              cpu: {{ .Values.resources.limits.cpu }}
+              memory: {{ .Values.resources.limits.memory }}
+          
           envFrom:
           - configMapRef:
               name: {{ .Values.name }}-config
           - secretRef:
               name: {{ .Values.name }}-secret
+              
+          
               
