@@ -14,8 +14,6 @@ service:
 config: 
   NODE_ENV: development
   PORT: 3005
-  GMAIL_USER: thanuj.kularathna2@gmail.com
-  GMAIL_PASSWORD: dianiiitezyzuosw
   FRONTEND_URL: http://localhost:5173
   
   EMAIL_FROM: "thanujakularathna119@gmail.com"
@@ -64,3 +62,9 @@ probes:
     failureThreshold: 3
     successThreshold: 1
     timeoutSeconds: 3
+    
+autoscaling:
+  create: false
+  minReplicas: 1
+  maxReplicas: 3
+  targetCPUUtilizationPercentage: 70

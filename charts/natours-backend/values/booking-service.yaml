@@ -57,3 +57,9 @@ probes:
     failureThreshold: 3
     successThreshold: 1
     timeoutSeconds: 3
+    
+autoscaling:
+  create: true
+  minReplicas: 1
+  maxReplicas: 3
+  targetCPUUtilizationPercentage: 70
