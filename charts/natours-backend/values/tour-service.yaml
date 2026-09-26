@@ -6,6 +6,8 @@ image:
   repository: 772097700150.dkr.ecr.us-east-1.amazonaws.com/natours-tour-service
   tag: latest
 
+port: 3002
+
 service:
   port: 3002
   
@@ -27,3 +29,30 @@ resources:
   limits:
     cpu: 500m
     memory: 512Mi
+    
+probes:
+  startup:
+    create: true
+    path: /health
+    initialDelaySeconds: 10
+    periodSeconds: 5
+    failureThreshold: 12    # 12 × 5s = 60s max startup time
+    successThreshold: 1
+
+  liveness:
+    create: true
+    path: /health
+    initialDelaySeconds: 0
+    periodSeconds: 10
+    failureThreshold: 3
+    successThreshold: 1
+    timeoutSeconds: 5
+
+  readiness:
+    create: true
+    path: /health
+    initialDelaySeconds: 0
+    periodSeconds: 5
+    failureThreshold: 3
+    successThreshold: 1
+    timeoutSeconds: 3
