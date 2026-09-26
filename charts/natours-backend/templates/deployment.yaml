@@ -22,6 +22,7 @@ spec:
           serviceAccountName: {{ .Values.serviceAccount.name }}
           {{- end }} #bind service account if create = true
           
+          {{- if .Values.resources }}
           resources:
             requests: 
               cpu: {{ .Values.resources.requests.cpu }}
@@ -29,6 +30,7 @@ spec:
             limits: 
               cpu: {{ .Values.resources.limits.cpu }}
               memory: {{ .Values.resources.limits.memory }}
+          {{- end }}
           
           envFrom:
           - configMapRef:
