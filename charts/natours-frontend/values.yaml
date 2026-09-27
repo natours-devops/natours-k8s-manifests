@@ -41,3 +41,32 @@ autoscaling:
   minReplicas: 1
   maxReplicas: 3
   targetCPUUtilizationPercentage: 70
+  
+ingress: 
+  name: natours-ingress
+  create: true
+  className: alb
+  
+  annotations:
+    alb.ingress.kubernetes.io/scheme: internet-facing
+    alb.ingress.kubernetes.io/target-type: ip
+    alb.ingress.kubernetes.io/healthcheck-path: /health
+    alb.ingress.kubernetes.io/healthcheck-interval-seconds: "30"
+    kubernetes.io/ingress.class: alb
+    alb.ingress.kubernetes.io/load-balancer-attributes: routing.http.drop_invalid_header_fields.enabled=true
+    alb.ingress.kubernetes.io/tags: Project=natours,Environment=production
+    
+  paths:
+    - path: /api
+      pathType: Prefix
+      service:
+        name: api-gateway
+        port: 3000
+        
+    - path: /
+      pathType: Prefix
+      service:
+        name: natours-frontend
+        port: 80
+    
+  
