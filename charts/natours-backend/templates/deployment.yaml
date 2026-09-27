@@ -12,15 +12,14 @@ spec:
       labels:
         app: {{ .Values.name }}
     spec:
+      {{- if .Values.serviceAccount.create }}
+      serviceAccountName: {{ .Values.serviceAccount.name }}
+      {{- end }} #bind service account if create = true
       containers:
         - name: {{ .Values.name }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           ports:
             - containerPort: {{ .Values.service.port }} 
-            
-          {{- if .Values.serviceAccount.create }}
-          serviceAccountName: {{ .Values.serviceAccount.name }}
-          {{- end }} #bind service account if create = true
           
           {{- if .Values.resources }}
           resources:
