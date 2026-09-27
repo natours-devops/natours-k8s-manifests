@@ -16,7 +16,7 @@ config:
   PORT: "3001"
   JWT_EXPIRES_IN: "90d"
   JWT_COOKIE_EXPIRES_IN: "90"
-  FRONTEND_URL: "https://your-domain.com" #change this later
+  FRONTEND_URL: http://frontend-service:80 #change this later
   NOTIFICATION_SERVICE_URL: "http://notification-service:3005"
 
 serviceAccount:

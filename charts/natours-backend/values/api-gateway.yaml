@@ -18,7 +18,7 @@ config:
   TOUR_SERVICE_URL: http://tour-service:3002
   REVIEW_SERVICE_URL: http://review-service:3003
   BOOKING_SERVICE_URL: http://booking-service:3004
-  FRONTEND_URL: http://localhost:5173
+  FRONTEND_URL: http://frontend-service:80
 
 serviceAccount:
   create: false

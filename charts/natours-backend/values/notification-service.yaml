@@ -14,7 +14,7 @@ service:
 config: 
   NODE_ENV: development
   PORT: 3005
-  FRONTEND_URL: http://localhost:5173
+  FRONTEND_URL: http://frontend-service:80
   
   EMAIL_FROM: "thanujakularathna119@gmail.com"
   EMAIL_HOST: "sandbox.smtp.mailtrap.io"
